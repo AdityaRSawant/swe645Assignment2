@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<title>Survey Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<body class="w3-light-grey">
+  <div id="SurveyPageTitle">
+    <div class="w3-container w3-blue">
+      <h2>Campus Visit Feedback Survey</h2>
+    </div>
+  </div>
+  <div id="welcomeMsg">
+  </div>
+  <div id="alertBox" class="alert">
+  </div>
+  <form id="SurveyForm" class="w3-container" autocomplete="on">
+    <!--This section contains form that will ask for specified details of the student attending the survey-->
+    <div class="w3-row-padding">
+      <p>
+        <!--First Name and Last Name of the Student-->
+        <div class="w3-third">
+          <label>First Name</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" type="text" id="fname" name="fname" required placeholder="Enter First Name" autofocus>
+        </div>
+        <div class="w3-third">
+          <label>Last Name</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" type="text" id="lname" name="lname" required placeholder="Enter Last Name">
+        </div>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--Address of the student attending the survey-->
+      <p>
+        <div class="w3-third">
+          <label>Street Address</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="staddr" name="staddr" type="text" required placeholder="Enter Street Address">
+        </div>
+        <div class="w3-third">
+          <label>Zip</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="zipcode" maxlength="5" name="zipcode" type="text" required placeholder="Enter Zip Code">
+          <span id="ZipMsg" class="requiredField">Please enter a valid zipcode</span>
+        </div>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--Contact Details of the student-->
+      <p>      
+        <div class="w3-third">
+          <label>City</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="city" name="city" type="text" required placeholder="Enter City">
+        </div>
+        <div class="w3-third">
+          <label>State</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="state" name="state" type="text" required placeholder="Enter State">
+        </div>
+        <div class="w3-third">       
+          <label>Telephone Number</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="contact" name="contact" type="text" required placeholder="Enter contact number">
+        </div>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--URL of the student if any and the date on which the student attended the survey-->
+      <p>
+        <div class="w3-third">
+          <label>Email ID</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="email" name="email" type="text" required
+            placeholder="Enter Email ID (name@domain.com)">
+        </div>
+        <div class="w3-third">
+          <label>Date of Survey</label><span class="requiredField">*</span>
+          <input class="w3-input w3-border" id="date" type="date" required placeholder="Enter the date of survey" required>
+        </div>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--Check box related question for student-->
+      <p>
+        <label class="QstnText">Indicate by checking boxes what you liked the most about your
+          visit</label>
+        <p>
+          <div class="w3-col m3">
+            <input class="w3-check" type="checkbox">
+            <label>Students</label>
+          </div>
+          <div class="w3-col m3">
+            <input class="w3-check" type="checkbox">
+            <label>Location</label>
+          </div>
+        </p>
+        <p>
+          <div class="w3-col m3">
+            <input class="w3-check" type="checkbox">
+            <label> Campus</label>
+          </div>
+          <div class="w3-col m3">
+            <input class="w3-check" type="checkbox">
+            <label>Atmosphere</label>
+          </div>
+        </p>
+        <p>
+          <div class="w3-col m3">
+            <input class="w3-check" type="checkbox">
+            <label>Dorm Rooms</label>
+          </div>
+          <div class="w3-col m3">
+            <input class="w3-check" type="checkbox">
+            <label>Sports</label>
+          </div>
+        </p>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--Radio Button related question for students-->
+      <p>
+        <label class="QstnText">Indicate source of interest in the university</label>
+        <p>
+          <div class="w3-col m3">
+            <input class="w3-radio" type="radio" name="source" value="friends">
+            <label>Friends</label>
+          </div>
+          <div class="w3-col m3">
+            <input class="w3-radio" type="radio" name="source" value="television">
+            <label>Television</label>
+          </div>
+          <div class="w3-col m3">
+            <input class="w3-radio" type="radio" name="source" value="internet">
+            <label>Internet</label>
+          </div>
+          <div class="w3-col m3">
+            <input class="w3-radio" type="radio" name="source" value="other">
+            <label>Other</label>
+          </div>
+        </p>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--Recommendation possibility using dropdown option-->
+      <p>
+        <label class="QstnText">How likely would you recommend this school</label>
+        <p>
+          <div class="w3-col m3">
+            <select id="recommendselect" class="w3-input w3-border" name="recommend">
+              <option value="1">Very Likely</option>
+              <option value="2">Likely</option>
+              <option value="3">Unlikely</option>
+            </select>
+          </div>
+        </p>
+      </p>
+    </div>
+    <div class="w3-row-padding">
+      <!--Additional Comments sections-->
+      <div class="w3-row-padding">
+        <!--Survey Form Extension Raffle field input section-->
+        <p>
+          <div class="w3-third">
+            <label>Survey Form Raffle Field</label><span class="requiredField">*</span>
+            <input class="w3-input w3-border" id="data" name="data" type="text" required placeholder="Enter 10 comma separated numbers from 1-100">
+            <span id="DataMsg" class="requiredField">Please enter 10 comma separated values</span>
+          </div>
+        </p>
+      </div>
+      <p>
+        <label class="QstnText">Additional Comments</label>
+        <textarea id="comments" class="w3-input w3-border" rows="4" cols="50"
+          placeholder="Enter Additional Comments if any"></textarea>
+      </p>
+      <p>
+        <button class="w3-button w3-black w3-round-xlarge">Submit</button>
+        <input type="reset" value="Cancel" class="w3-button w3-black w3-round-xlarge">
+      </p>
+    </div>
+    <div id="author">Author: Aditya Raghunath Sawant (G01177792)</div>
+  </form>
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+    <!--This section will display contact details and various platforms of connecting with George Mason University-->
+    <div class="w3-row-padding">
+      <div class="w3-twothird">
+        <p>Find us on social media.</p>
+        <a href="https://www.facebook.com/georgemason/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/georgemasonu/?hl=en"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/GeorgeMasonU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+        </a>
+        <a href="https://www.linkedin.com/school/george-mason-university/"><i
+            class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
+      <div id="univlogo" class="w3-third">
+        <a href="https://www2.gmu.edu/">
+          <img src="university_logo.png" alt="University_Logo" height="100"
+            width="150">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
