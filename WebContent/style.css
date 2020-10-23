@@ -36,8 +36,8 @@ table th, table td {
 
 /**Header CSS of Survey Page**/
 .w3-blue {
-/*     background-color: #ffcc33 !important; */
-    background-color: #FF0000 !important;
+    background-color: #ffcc33 !important; 
+    /*background-color: #FF0000 !important;*/
     border: 5px solid #006633 !important;
     display: inline-block;
     width: 80%;
